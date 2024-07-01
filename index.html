@@ -37,7 +37,7 @@
             light.position.set(0.5, 1, 0.25);
             scene.add(light);
 
-            document.body.appendChild(THREE.ARButton.createButton(renderer));
+            document.body.appendChild(ARButton.createButton(renderer));
 
             loader = new THREE.GLTFLoader();
             loader.load('https://raw.githubusercontent.com/NikLever/Learn-WebXR/main/models/gltf/knight.glb', function (gltf) {
