@@ -28,7 +28,7 @@
         function init() {
             scene = new THREE.Scene();
             camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 1000);
-              console.log(THREE,'dffghbjn');
+
             renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
             renderer.setSize(window.innerWidth, window.innerHeight);
             renderer.xr.enabled = true;
@@ -37,8 +37,8 @@
             const light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1);
             light.position.set(0.5, 1, 0.25);
             scene.add(light);
-            console.log(THREE,'dffghbjn');
-            document.body.appendChild(THREE.ARButton.createButton(renderer));
+
+            document.body.appendChild(ARButton.createButton(renderer));
 
             loader = new THREE.GLTFLoader();
             loader.load('https://raw.githubusercontent.com/NikLever/Learn-WebXR/main/models/gltf/knight.glb', function (gltf) {
