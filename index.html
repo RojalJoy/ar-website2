@@ -13,14 +13,23 @@
             display: block;
         }
     </style>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.module.js",
+                "three/examples/jsm/loaders/GLTFLoader.js": "https://cdn.jsdelivr.net/npm/three@0.128.0/examples/jsm/loaders/GLTFLoader.js",
+                "three/examples/jsm/webxr/ARButton.js": "https://cdn.jsdelivr.net/npm/three@0.128.0/examples/jsm/webxr/ARButton.js"
+            }
+        }
+    </script>
 </head>
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@webxr-input-profiles/motion-controllers@1.0.0"></script>
     <script type="module">
-        import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.module.js';
-        import { ARButton } from 'https://cdn.jsdelivr.net/npm/three@0.128.0/examples/jsm/webxr/ARButton.js';
-        import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.128.0/examples/jsm/loaders/GLTFLoader.js';
+        import * as THREE from 'three';
+        import { ARButton } from 'three/examples/jsm/webxr/ARButton.js';
+        import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
         let camera, scene, renderer;
 
