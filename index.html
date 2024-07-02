@@ -52,7 +52,7 @@
             document.body.appendChild(ARButton.createButton(renderer));
 
             const loader = new GLTFLoader();
-            loader.load('knight.glb', function(gltf) {
+            loader.load('knight2.glb', function(gltf) {
                 const model = gltf.scene;
                 model.position.set(0, 0, -0.3);
                 scene.add(model);
