@@ -54,6 +54,7 @@
             const loader = new GLTFLoader();
             loader.load('source/64de1345c603b299c004f2d6.glb', function(gltf) {
                 const model = gltf.scene;
+                model.scale.set(0.1, 0.1, 0.1);
                 model.position.set(0, 0, -0.3);
                 scene.add(model);
             }, undefined, function(error) {
